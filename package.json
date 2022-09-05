@@ -19,6 +19,8 @@
     "webpack": "^4.46.0"
   },
   "devDependencies": {
+    "eslint": "^8.23.0",
+    "eslint-plugin-vue": "^9.4.0",
     "node-sass": "^7.0.1",
     "sass": "^1.54.6",
     "sass-loader": "^10.1.1"
