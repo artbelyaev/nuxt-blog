@@ -24,13 +24,36 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at consequatur, ducimus ea error incidunt laboriosam nostrum obcaecati officia unde?</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at consequatur, ducimus ea error incidunt laboriosam nostrum obcaecati officia unde?</p>
         </div>
+        <div class="post__footer">
+            <CommentForm @created="createComment" v-if="formVisibility" class="post__form" />
+            <div v-if="true" class="post__comments">
+                <Comment v-for="n in 4" :key="n" class="post__comment"/>
+            </div>
+            <div v-else class="post__empty">Комментариев нет</div>
+        </div>
     </article>
 </template>
 
 <script>
+import Comment from '@/components/main/Comment';
+import CommentForm from '@/components/main/CommentForm';
+
 export default {
     validate({params}) {
         return Boolean(params.id);
+    },
+    data() {
+        return {
+            formVisibility: true,
+        };
+    },
+    components: {
+        Comment, CommentForm,
+    },
+    methods: {
+        createComment() {
+            this.formVisibility = false;
+        }
     }
 };
 </script>
@@ -46,6 +69,14 @@ export default {
 
         &__content {
             margin-bottom: 20px;
+        }
+
+        &__empty {
+            text-align: center;
+        }
+
+        &__comment {
+            margin-bottom: 10px;
         }
     }
 
