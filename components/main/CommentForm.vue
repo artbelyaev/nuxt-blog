@@ -4,7 +4,9 @@
         :rules="rules"
         ref="form"
         label-width="120px"
+        class="comment-form"
     >
+        <h1 class="comment-form__title">Добавить комментарии</h1>
         <el-form-item label="Имя" prop="name">
             <el-input v-model.trim="controls.name" />
         </el-form-item>
@@ -76,5 +78,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+    .comment-form {
+        &__title {
+            margin-bottom: 15px;
+        }
+    }
 </style>

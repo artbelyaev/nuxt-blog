@@ -1,13 +1,13 @@
 <template>
-  <nav>
-    <h1>SSR Blog</h1>
-  </nav>
+    <nav>
+        <h1>SSR Blog</h1>
+    </nav>
 </template>
 
 <script>
 export default {
-  name: "Navigation"
-}
+    name: 'Navigation'
+};
 </script>
 
 <style lang="scss" scoped>

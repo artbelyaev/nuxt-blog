@@ -3,7 +3,7 @@
         <div class="post__header post-header">
             <div class="post-header__top">
                 <h1 class="post-header__title">Post title</h1>
-                <NuxtLink to="/">
+                <NuxtLink to="/" class="post-header__back">
                     <i class="el-icon-back"></i>
                 </NuxtLink>
             </div>
@@ -86,6 +86,10 @@ export default {
             display: flex;
             align-items: center;
             justify-content: space-between;
+        }
+        
+        &__back {
+            cursor: pointer;
         }
 
         &__top {
